@@ -35,7 +35,7 @@ data <- read.delim("household_power_consumption.txt", sep=";",
 # Filtering out the data and keeping only the required rows
 data <- data[data$Date %in% c("1/2/2007", "2/2/2007"),]
 
-# Pasting the time column in the data column separated by a space. I am doing this so that I can get rid of
+# Pasting the time column in the date column separated by a space. I am doing this so that I can get rid of
 # Time column all together and parse the full information in a single date time object
 data$Date <- paste(data$Date, data$Time, sep=" ")
 
