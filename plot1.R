@@ -1,7 +1,8 @@
 # To run this file just source it !!
 
 #Reading the data from txt file. I have added col classes as it is supposed to be more efficient and I
-# do not want columns as factors. Assuming the file is in working directory
+# do not want columns as factors. Assuming the file is in working directory. Also since the na character is ?
+# changing that via na.strings
 data <- read.delim("household_power_consumption.txt", sep=";", 
                    na.strings="?", colClasses = c("character", "character", "numeric", 
                                                   "numeric","numeric","numeric","numeric","numeric","numeric"))
