@@ -26,6 +26,10 @@ plot_4 <- function(data) {
     plot(data$Date, data$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 }
 
+#downloading the file
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "household_power_consumption.zip", method = "curl") 
+unzip("household_power_consumption.zip")
+
 #Reading the data from txt file. I have added col classes as it is supposed to be more efficient and I
 # did not want columns as factors
 data <- read.delim("household_power_consumption.txt", sep=";", 
