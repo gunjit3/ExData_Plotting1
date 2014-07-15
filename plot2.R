@@ -1,5 +1,10 @@
 # To run this script just source the file !
 
+#downloading the file
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "household_power_consumption.zip", method = "curl") 
+unzip("household_power_consumption.zip")
+
+
 #Reading the data from txt file. I have added col classes as it is supposed to be more efficient and I
 # did not want columns as factors
 data <- read.delim("household_power_consumption.txt", sep=";", 
