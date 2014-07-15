@@ -1,5 +1,9 @@
 # To run this script just source the file !
 
+#downloading the file
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "household_power_consumption.zip", method = "curl") 
+unzip("household_power_consumption.zip")
+
 
 # this function does all the plotting task with proper labels and legends. Will be called later.
 plot_3 <- function(data) {
