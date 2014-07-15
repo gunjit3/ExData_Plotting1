@@ -1,5 +1,9 @@
 # To run this file just source it !!
 
+#downloading the file
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", destfile = "household_power_consumption.zip", method = "curl") 
+unzip("household_power_consumption.zip")
+
 #Reading the data from txt file. I have added col classes as it is supposed to be more efficient and I
 # do not want columns as factors. Assuming the file is in working directory. Also since the na character is ?
 # changing that via na.strings
